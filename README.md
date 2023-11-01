@@ -1,6 +1,9 @@
 # Ticket Tracker
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) to create tickets for the user as well as storage of the ticket and displaying it on the dashboard.
 
+Create ticket page:
+![image](https://github.com/taniaban2712/Ticket-Management-System/assets/110692684/ec03d7bb-c252-4ce3-979f-536ab2ea9883)
+
 ## Getting Started
 
 First, run the development server:
