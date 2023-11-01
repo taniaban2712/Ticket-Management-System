@@ -8,7 +8,7 @@ const getTicket= async()=>{
     return res.json();
   }
   catch(err){
-    console.log("Failed to get tickets", error);
+    console.log("Failed to get tickets", err);
   }
 }
 
