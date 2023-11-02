@@ -9,6 +9,24 @@ const TicketForm = ({ticket}) => {
 
   const EDITMODE=ticket._id==="new"? false : true
 
+  const startingTicketData={
+    title:"",
+    description:"",
+    priority:1,
+    status:"not started",
+    category:"Hardware Problem",
+  };
+
+  if(EDITMODE){
+    startingTicketData["title"]=ticket.title
+    startingTicketData["description"]=ticket.description
+    startingTicketData["status"]=ticket.status
+    startingTicketData["priority"]=ticket.priority
+    startingTicketData["categpry"]=ticket.category
+  }
+
+  const [formData, setFormData]=useState(startingTicketData);
+  
   const handleChange=(e)=>{
     const value=e.target.value;
     const name=e.target.name;
@@ -50,25 +68,7 @@ const TicketForm = ({ticket}) => {
     }
   };
 
-  const startingTicketData={
-    title:"",
-    description:"",
-    priority:1,
-    status:"not started",
-    category:"Hardware Problem",
-  };
 
-  if(EDITMODE){
-    startingTicketData["title"]=ticket.title
-    startingTicketData["description"]=ticket.description
-    startingTicketData["status"]=ticket.status
-    startingTicketData["priority"]=ticket.priority
-    startingTicketData["categpry"]=ticket.category
-  }
-
-
-
-  const [formData, setFormData]=useState(startingTicketData);
   return (
     <div className='flex justify-center'>
       <form className='flex flex-col gap-3 w-1/2' method="post" onSubmit={handleSubmit}>

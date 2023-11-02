@@ -18,7 +18,6 @@ const DeleteBlock = ({id}) => {
     });
     if(res.ok){
       router.refresh()
-      router.push("/")
     }
 
   }
