@@ -14,15 +14,17 @@ const TicketForm = ({ticket}) => {
     description:"",
     priority:1,
     status:"not started",
+    progress:0,
     category:"Hardware Problem",
   };
 
   if(EDITMODE){
-    startingTicketData["title"]=ticket.title
-    startingTicketData["description"]=ticket.description
-    startingTicketData["status"]=ticket.status
-    startingTicketData["priority"]=ticket.priority
-    startingTicketData["categpry"]=ticket.category
+    startingTicketData["title"]=ticket.title;
+    startingTicketData["description"]=ticket.description;
+    startingTicketData["status"]=ticket.status;
+    startingTicketData["progress"] = ticket.progress;
+    startingTicketData["priority"]=ticket.priority;
+    startingTicketData["categpry"]=ticket.category;
   }
 
   const [formData, setFormData]=useState(startingTicketData);
