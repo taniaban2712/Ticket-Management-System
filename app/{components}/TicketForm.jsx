@@ -48,6 +48,7 @@ const TicketForm = ({ticket}) => {
         body: JSON.stringify({formData}),
         "content-type":"application/json",
         });
+        console.log(res);
         if(!res.ok){
           throw new Error("Failed to create this ticket!");
         }

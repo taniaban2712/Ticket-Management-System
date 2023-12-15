@@ -1,6 +1,7 @@
 import mongoose,{Schema} from "mongoose";
 
-mongoose.connect(process.env.MONGODB_URI);
+
+mongoose.connect("mongodb+srv://taniaban2712:tb260851574@cluster0.mzx2dr0.mongodb.net/?retryWrites=true&w=majority");
 mongoose.Promise=global.Promise;
 
 const ticketSchema=new Schema({

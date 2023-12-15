@@ -5,7 +5,9 @@ export async function POST(req){
     console.log("POST RAN");
     try{
         const body=await req.json();
+        console.log(body)
         const ticketData=body.formData;
+        console.log(ticketData)
         await Ticket.create(ticketData);
         return NextResponse.json({message:"Ticket Created!"},{ status:201 });
     }
