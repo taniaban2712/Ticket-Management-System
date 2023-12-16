@@ -18,8 +18,8 @@ const getTicket= async()=>{
 
 const Dashboard = async () => {
   const data= await getTicket();
-
-  if(!data?.tickets){
+  console.log(data)
+  if(!data){
     return <div>No Tickets</div>;
   }
 
